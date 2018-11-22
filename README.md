@@ -14,9 +14,8 @@ Summary: Tool to automatically fetch, transform and arrange subsets of multidime
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-startr-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-startr-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/r-startr-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-startr-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-startr-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-startr-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/r-startr-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/r-startr-feedstock)
 
 Current release info
 ====================
