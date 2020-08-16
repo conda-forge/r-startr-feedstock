@@ -3,7 +3,7 @@ About r-startr
 
 Home: https://earth.bsc.es/gitlab/es/startR/
 
-Package license: LGPL-3
+Package license: LGPL-3.0-only
 
 Feedstock license: BSD-3-Clause
 
@@ -116,11 +116,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@bgruening](https://github.com/bgruening/)
-* [@cbrueffer](https://github.com/cbrueffer/)
 * [@conda-forge/r](https://github.com/conda-forge/r/)
-* [@daler](https://github.com/daler/)
-* [@dbast](https://github.com/dbast/)
-* [@jdblischak](https://github.com/jdblischak/)
-* [@johanneskoester](https://github.com/johanneskoester/)
 
