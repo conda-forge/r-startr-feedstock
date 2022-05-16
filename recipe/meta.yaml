@@ -32,6 +32,7 @@ requirements:
     - r-easyncdf
     - r-future
     - r-multiapply >=2.1.1
+    - r-s2dv
     - r-s2dverification
   run:
     - r-base
@@ -41,6 +42,7 @@ requirements:
     - r-easyncdf
     - r-future
     - r-multiapply >=2.1.1
+    - r-s2dv
     - r-s2dverification
 
 test:
