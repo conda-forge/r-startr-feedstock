@@ -1,4 +1,4 @@
-{% set version = "2.2.1" %}
+{% set version = "2.2.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,7 +11,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/startR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/startR/startR_{{ version }}.tar.gz
-  sha256: 8d4915882871f1a0fbbcfe524a59bbb65079906de953728bba822c9bc9f650ea
+  sha256: 7c8e20c45c93a5da3f1a05211a92acb7f19e2cfc11a95f955513cf57859aed27
 
 build:
   merge_build_host: true  # [win]
