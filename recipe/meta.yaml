@@ -1,4 +1,4 @@
-{% set version = "2.4.0" %}
+{% set version = "3.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/startR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/startR/startR_{{ version }}.tar.gz
-  sha256: 4440cd9d5bbb4a3bf0077dc5ed0aa6cdb4a1901a5f377d252e96fe5f19cf3edc
+  sha256: ae90eaf90954f47a96c503f18475fc89e9de195ecce574446d7d4c5035284628
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
