@@ -1,4 +1,4 @@
-{% set version = "2.4.0" %}
+{% set version = "3.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,38 +9,43 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/startR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/startR/startR_{{ version }}.tar.gz
-  sha256: 4440cd9d5bbb4a3bf0077dc5ed0aa6cdb4a1901a5f377d252e96fe5f19cf3edc
+  sha256: ae90eaf90954f47a96c503f18475fc89e9de195ecce574446d7d4c5035284628
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-climprojdiags
+    - r-climprojdiags >=0.3.4
     - r-abind
     - r-bigmemory
     - r-easyncdf
     - r-future
-    - r-multiapply >=2.1.1
+    - r-multiapply >=2.1.0
     - r-s2dv
-    - r-s2dverification
+    - r-stringr
   run:
     - r-base
-    - r-climprojdiags
+    - r-climprojdiags >=0.3.4
     - r-abind
     - r-bigmemory
     - r-easyncdf
     - r-future
-    - r-multiapply >=2.1.1
+    - r-multiapply >=2.1.0
     - r-s2dv
-    - r-s2dverification
+    - r-stringr
 
 test:
   commands:
@@ -49,12 +54,12 @@ test:
 
 about:
   home: https://earth.bsc.es/gitlab/es/startR/
-  license: LGPL-3.0-only
+  license: GPL-3.0-only
   summary: Tool to automatically fetch, transform and arrange subsets of multidimensional data sets (collections of files) stored in local and/or remote file systems or servers, using multicore capabilities where possible. The tool provides an interface to perceive a collection of data sets as a single large multidimensional
     data array, and enables the user to request for automatic retrieval, processing and arrangement of subsets of the large array. Wrapper functions to add support for custom file formats can be plugged in/out, making the tool suitable for any research field where large multidimensional data sets are involved.
-  license_family: LGPL
+  license_family: GPL
   license_file:
-    - {{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-3
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
